@@ -1,10 +1,70 @@
 .container{
-    display: flex;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .dolares{
+    margin: 5px;
     padding: 5px;
-    border: 2px solid black;
     text-align: center;
+    color: #5d5d5d;
+    border-top: 3px solid #079a7d;
+    box-shadow: 0 0 8px #00000021;
+    background-color: #efefef;
+}
+
+.containerData{
+    display: flex;
+    justify-content: center;
+}
+
+.sell{
+    margin-left: 20px;
+}
+
+.venta{
+    color: #079a7d
+}
+
+.buy{
+    margin-right: 20px;
+}
+
+.compra{
+    color: #079a7d;
+}
+
+/* PARA VISTA MOBILE */
+@media (max-width: 480px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding: 7px;
+    }
+
+    .dolares{
+        font-size: 20px;
+    }
+
+    .c{
+        font-size: 24px;
+        margin: 5px
+    }
+
+    .v{
+        font-size: 24px;
+        margin: 5px;
+        margin-top: 2px
+    }
+
+    .date{
+        font-size: 15px;
+        margin: 5px
+    }
+}
+/* PARA VISTA TABLET*/
+@media (max-width: 1024px) {
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
 }

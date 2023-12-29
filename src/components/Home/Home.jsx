@@ -1,11 +1,12 @@
 import style from '../Home/Home.module.css'
+import Dolars from '../Dolars/Dolars'
 
 
 const Home = () => {
     return(
-        <>
-        <h1>Home</h1>
-        </>
+        <div className={style.mainContainer}>
+        <Dolars />
+        </div>
     )
 }
 

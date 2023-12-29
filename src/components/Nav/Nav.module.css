@@ -1,0 +1,23 @@
+.nav{
+    background-color: #d1d1d1;
+    color: #079a7d;
+    padding: 13px;
+}
+
+.title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+
+/* PARA VISTA MOBILE */
+@media (max-width: 480px) {
+    .title{
+        font-size: 30px;
+    }
+}
+/* PARA VISTA TABLET*/
+@media (max-width: 1024px) {
+    
+}

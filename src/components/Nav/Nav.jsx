@@ -2,9 +2,9 @@ import style from '../Nav/Nav.module.css'
 
 const Nav = () => {
     return(
-        <>
-        <h1>Nav</h1>
-        </>
+        <div className={style.nav}>
+        <p className={style.title}>Dolarizate</p>
+        </div>
     )
 }
 

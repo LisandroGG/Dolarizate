@@ -1,0 +1,24 @@
+.container{
+    background-color: #d1d1d1;
+}
+
+.copy{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* PARA VISTA MOBILE */
+@media (max-width: 480px) {
+    .container{
+        padding: 10px;
+    }
+
+    .copy{
+        font-size: 20px;
+    }
+}
+/* PARA VISTA TABLET*/
+@media (max-width: 1024px) {
+    
+}

@@ -1,0 +1,14 @@
+.mainContainer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* PARA VISTA MOBILE */
+@media (max-width: 480px) {
+    
+}
+/* PARA VISTA TABLET*/
+@media (max-width: 1024px) {
+    
+}
