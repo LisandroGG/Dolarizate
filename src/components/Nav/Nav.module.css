@@ -1,21 +1,26 @@
 .nav{
-    background-color: #d1d1d1;
-    color: #079a7d;
+    background: linear-gradient(to right, #efefef, #d0d0d0);
     padding: 13px;
+    border-bottom: 3px solid #079a7d;
 }
 
-.title{
+.title {
+    color: #079a7d;
     text-align: center;
     font-size: 40px;
     font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.title:hover {
+    color: #079a7d; 
+    transition: color 0.3s ease; 
 }
 
 
 /* PARA VISTA MOBILE */
 @media (max-width: 480px) {
-    .title{
-        font-size: 30px;
-    }
+    
 }
 /* PARA VISTA TABLET*/
 @media (max-width: 1024px) {

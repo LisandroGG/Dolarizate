@@ -1,21 +1,69 @@
 .container{
-    background-color: #d1d1d1;
+    background: linear-gradient(to right, #efefef, #d0d0d0);
+    padding: 15px;
+    border-top: 2px solid #5d5d5d
 }
 
-.copy{
+.main{
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
     text-align: center;
-    margin-top: 10px;
+}
+
+
+.copy{
     font-weight: bold;
+}
+
+.red{
+    margin-top: 10px;
+}
+
+.github{
+    padding: 3px;
+
+    :hover{
+        transition: all 0.3s;
+        background-color: #12b793;
+        border-radius: 15px;
+    }
+}
+
+.gmail{
+    padding: 3px;
+    border-radius: 15px;
+
+    :hover{
+        transition: all 0.3s;
+        background-color: #12b793;
+        border-radius: 15px;
+    }
+}
+.linkedin{
+    padding: 3px;
+
+    :hover{
+        transition: all 0.3s;
+        background-color: #12b793;
+        border-radius: 15px;
+    }
 }
 
 /* PARA VISTA MOBILE */
 @media (max-width: 480px) {
     .container{
-        padding: 10px;
+        padding: 15px;
     }
 
     .copy{
-        font-size: 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .main{
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 /* PARA VISTA TABLET*/

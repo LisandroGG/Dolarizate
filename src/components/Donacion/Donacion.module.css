@@ -1,0 +1,25 @@
+.donaciones{
+    background: linear-gradient(to right, #efefef, #d0d0d0);
+    text-align: center;
+    padding: 10px;
+}
+
+.title{
+    color: #079a7d;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+}
+
+.link{
+    text-decoration: none;
+    margin-top: 10px;
+    color: black;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.link:hover{
+    color: #454545
+}
