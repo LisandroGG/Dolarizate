@@ -25,12 +25,16 @@ const Calculadora = () => {
     const [sinImpuestos, setsinImpuestos] = useState(null);
     const cotizacionDolar = precioVentaOficial
 
+    const formatNumber = (number) => {
+        return number.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    };
+
     useEffect(() => {
         if (monto !== '') {
             const resultadoCalculado = parseFloat(monto) * cotizacionDolar;
             const resultadoFormateado = isNaN(resultadoCalculado) ? null : resultadoCalculado * impuestos;
             setsinImpuestos(resultadoCalculado.toFixed(2))
-            setResultado(resultadoFormateado !== null ? resultadoFormateado.toFixed(2) : null);
+            setResultado(resultadoFormateado !== null ? formatNumber(resultadoFormateado) : null);
         } else {
         setResultado(null);
         setsinImpuestos(null)
