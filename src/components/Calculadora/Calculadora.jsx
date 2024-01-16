@@ -42,7 +42,12 @@ const Calculadora = () => {
     }, [monto, cotizacionDolar]);
 
     const handleInputChange = (event) => {
-        setMonto(event.target.value);
+        const inputValue = event.target.value;
+    
+    
+    if (/^\d*\.?\d*$/.test(inputValue) || inputValue === '') {
+        setMonto(inputValue);
+        }
     };
 
     return(
