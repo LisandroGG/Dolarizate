@@ -1,0 +1,82 @@
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]:focus {
+    outline: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.child{
+    background-color: #efefef;
+    box-shadow: 0 0 8px #00000021;
+    color: #5d5d5d;
+}
+
+.calculadora{
+    text-align: center;
+    padding: 30px;
+    
+}
+
+.calculadora label p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.title{
+    text-align: center;
+    background-color: #efefef;
+    border-top: 3px solid #079a7d;
+    box-shadow: 0 0 8px #00000021;
+    color: #5d5d5d;
+}
+
+.span{
+    font-size: 20px;
+}
+
+.result{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 5px;
+    padding: 5px;
+}
+
+.result p {
+    font-size: 18px;
+}
+
+.concept{
+    text-align: start;
+}
+
+.mount{
+    text-align: end;
+}
+
+.input{
+    height: 20px;
+    border-radius: 4px;
+    border: 2px;
+    padding: 4px;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* PARA VISTA MOBILE */
+@media (max-width: 480px) {
+
+}
+/* PARA VISTA TABLET*/
+@media (max-width: 1024px) {
+    
+}

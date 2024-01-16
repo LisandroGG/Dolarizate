@@ -1,5 +1,6 @@
 import style from '../Home/Home.module.css'
 import Dolars from '../Dolars/Dolars'
+import Calculadora from '../Calculadora/Calculadora'
 
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
             <h3 className={style.tipo}>Dólar Oficial, Dólar Blue, Dólar Bolsa, Dólar Mayorista, Dólar Cripto y Dólar Tarjeta</h3>
             </div>
             <Dolars />
-
+            <Calculadora />
             <div className={style.info}>
                 <h1 className={style.inf}>Información</h1>
                 <h3>Esta pagina utiliza la Api de DolarAPI, la cual trae toda la información sobre los dolares, tales como se pueden ver su nombre, compra, venta y ultima actualizacion.</h3><br/>
