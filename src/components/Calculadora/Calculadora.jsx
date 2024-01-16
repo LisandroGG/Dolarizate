@@ -16,14 +16,11 @@ const Calculadora = () => {
 
     //CALCULADORA
     const impuestos = 1.6
-
-    const PrecioOficial = dolars.find((dolar) => dolar.casa === "oficial")
-    const precioVentaOficial = PrecioOficial ? PrecioOficial.venta : null;
+    const [selectedCotizacion, setSelectedCotizacion] = useState('oficial')
 
     const [monto, setMonto] = useState('');
     const [resultado, setResultado] = useState(null);
     const [sinImpuestos, setsinImpuestos] = useState(null);
-    const cotizacionDolar = precioVentaOficial
 
     const formatNumber = (number) => {
         return number.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -31,23 +28,29 @@ const Calculadora = () => {
 
     useEffect(() => {
         if (monto !== '') {
-            const resultadoCalculado = parseFloat(monto) * cotizacionDolar;
-            const resultadoFormateado = isNaN(resultadoCalculado) ? null : resultadoCalculado * impuestos;
-            setsinImpuestos(resultadoCalculado !== null ? formatNumber(resultadoCalculado) : null)
-            setResultado(resultadoFormateado !== null ? formatNumber(resultadoFormateado) : null);
+        const PrecioSeleccionado = dolars.find((dolar) => dolar.casa === selectedCotizacion);
+        const cotizacionSeleccionada = PrecioSeleccionado ? PrecioSeleccionado.venta : null;
+    
+          const resultadoCalculado = parseFloat(monto) * cotizacionSeleccionada;
+          const resultadoFormateado = isNaN(resultadoCalculado) ? null : resultadoCalculado * impuestos;
+        setsinImpuestos(resultadoCalculado !== null ? formatNumber(resultadoCalculado) : null);
+        setResultado(resultadoFormateado !== null ? formatNumber(resultadoFormateado) : null);
         } else {
         setResultado(null);
-        setsinImpuestos(null)
+        setsinImpuestos(null);
         }
-    }, [monto, cotizacionDolar]);
-
+    }, [monto, selectedCotizacion, dolars]);
+    
     const handleInputChange = (event) => {
         const inputValue = event.target.value;
     
-    
-    if (/^\d*\.?\d*$/.test(inputValue) || inputValue === '') {
+        if (/^\d*\.?\d*$/.test(inputValue) || inputValue === '') {
         setMonto(inputValue);
         }
+    };
+    
+    const handleCotizacionChange = (event) => {
+        setSelectedCotizacion(event.target.value);
     };
 
     return(
@@ -60,10 +63,18 @@ const Calculadora = () => {
                     <label>
                         <p>Cantidad de dolares a pagar:</p>
                         <br/>
-                        <span className={style.span}>USD</span><input className={style.input} type="number" value={monto} onChange={handleInputChange} /><span className={style.span}>.00</span>
+                        <select value={selectedCotizacion} onChange={handleCotizacionChange} className={style.select}>
+                        {dolars
+                .filter((dolar) => ['oficial', 'blue', 'tarjeta'].includes(dolar.casa))
+                .map((dolar) => (
+                <option key={dolar.casa} value={dolar.casa} className={style.option}>
+                    {dolar.casa.toUpperCase()}
+                </option>
+                ))}
+            </select>
+                        <input className={style.input} type="number" value={monto} onChange={handleInputChange} /><span className={style.span}>.00</span>
                     </label>
                     
-                    <h4>Cotizacion del dolar oficial: {cotizacionDolar}</h4>
                     <div className={style.result}>
                         <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#bdbdbd">
                         <tr>

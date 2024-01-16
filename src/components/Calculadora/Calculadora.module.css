@@ -68,6 +68,15 @@ input[type="number"]:focus {
     margin-bottom: 20px;
 }
 
+.select{
+    font-size: 20px;
+    color: #5d5d5d;
+}
+
+.option{
+    color: #5d5d5d;
+}
+
 
 
 /* PARA VISTA MOBILE */
