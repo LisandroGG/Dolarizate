@@ -56,17 +56,20 @@ const Calculadora = () => {
                     
                     <h4>Cotizacion del dolar oficial: {cotizacionDolar}</h4>
                     <div className={style.result}>
-                        <div className={style.concept}>
-                        <h3>Concepto</h3>
-                        <p>Total sin impuestos</p>
-                        <p>Total con impuestos</p>
-                        </div>
-                        <div className={style.mount}>
-                        <h3>Monto (ARS)</h3>
-                        <p>${sinImpuestos}</p>
-                        <p>${resultado}</p>
-                        </div>
-                    
+                        <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#bdbdbd">
+                        <tr>
+                            <th><h3 className={style.concept}>Concepto</h3></th>
+                            <th><h3 className={style.mount}>Monto (ARS)</h3></th>
+                        </tr>
+                        <tr>
+                            <td><p className={style.concept}>Total sin impuestos</p></td>
+                            <td><p className={style.mount}>${sinImpuestos}</p></td>
+                        </tr>
+                        <tr>
+                            <td><p className={style.concept}>Total con impuestos</p></td>
+                            <td><p className={style.mount}>${resultado}</p></td>
+                        </tr>
+                        </table>
                     </div>
                 </div>
             </div>
