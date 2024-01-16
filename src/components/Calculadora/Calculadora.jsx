@@ -33,7 +33,7 @@ const Calculadora = () => {
         if (monto !== '') {
             const resultadoCalculado = parseFloat(monto) * cotizacionDolar;
             const resultadoFormateado = isNaN(resultadoCalculado) ? null : resultadoCalculado * impuestos;
-            setsinImpuestos(resultadoCalculado.toFixed(2))
+            setsinImpuestos(resultadoCalculado !== null ? formatNumber(resultadoCalculado) : null)
             setResultado(resultadoFormateado !== null ? formatNumber(resultadoFormateado) : null);
         } else {
         setResultado(null);
