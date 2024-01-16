@@ -72,7 +72,7 @@ const Calculadora = () => {
                 </option>
                 ))}
             </select>
-                        <input className={style.input} type="number" value={monto} onChange={handleInputChange} /><span className={style.span}>.00</span>
+                        <input className={style.input} type="number" value={monto} onChange={handleInputChange} />
                     </label>
                     
                     <div className={style.result}>

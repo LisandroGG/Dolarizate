@@ -83,6 +83,7 @@ input[type="number"]:focus {
 @media (max-width: 480px) {
 .input{
     font-size: 15px;
+    width: 150px;
 }
 .span{
     font-size: 15px;
